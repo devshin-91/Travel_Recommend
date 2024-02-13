@@ -25,7 +25,7 @@
             "content": "assistant는 점시간 메뉴를 추천해주는 요리사입니다."
         })
 
-        const url = process.env.AI_URL; // github secret에 등록된 gpt url 불러옴.
+        // const url = process.env.AI_URL; // github secret에 등록된 gpt url 불러옴. process is not defined 떄문에 일단 주석
         console.log(AI_URL); // 출력 테스트
         $button.addEventListener('click', e => {
             e.preventDefault()
