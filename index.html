@@ -4,64 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>제주도 여행 일정</title>
     <script defer src="js/index.js" type="module"></script>
-    
+    <link rel="stylesheet" href="css/style.css">  
+
 </head>
 <body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jfif" alt="로고"></a>
+        </div>
+    
+        <div class="top-bar">
+            <div class="company">&copy;devshin-91</div>
+        </div>
+    </header>
+
     <div class="container">
-        <form>
-            <input type="text">
-            <button type="submit">질문하기!</button>
-        </form>
-        <div class="answer"></div>
+        <div class="image-section">
+            <img src="images/cafe.jfif" alt="카페">
+        </div>
+        <div class="form-section">
+            <div class="form-title">제주도 여행 일정 입력</div>
+            <form id="form">
+                <h3>어디로 여행하시나요?</h3>
+                <input type="text" class="form-input" id="location" name="location" placeholder="제주도의 동네 또는 장소를 입력해주세요">
+                <h3>여행 일정을 입력해 주세요</h3>
+                <input type="text" class="form-input" id="days" name="days" placeholder="예: 1일">
+                <h3>여행 일정에 꼭 들어갔으면 하는 여행지를 입력해 주세요.</h3>
+                <input type="text" class="form-input" id="must" name="must" placeholder="예: 성산일출봉">
+                <h3>차를 렌트하셨나요?</h3>
+                <input type="radio" name="car" value="yes" />네
+                <input type="radio" name="car" value="no" />아니오
+                <button type="submit" class="form-button" id="submit">일정 생성</button>
+            </form>
+            <div class="answer"></div>
+        </div>
     </div>
-<<<<<<< Updated upstream
-    <script>
-        require("dotenv").config();
-        const $input = document.querySelector('input')
-        const $button = document.querySelector('button')
-        const $answer = document.querySelector('.answer')
-
-        const data = []
-        data.push({
-            "role": "system",
-            "content": "assistant는 점시간 메뉴를 추천해주는 요리사입니다."
-        })
-
-        // const url = process.env.AI_URL; // github secret에 등록된 gpt url 불러옴. process is not defined 떄문에 일단 주석
-        console.log(process.env.AI_URL); // 출력 테스트
-        $button.addEventListener('click', e => {
-            e.preventDefault()
-            const contents = $input.value
-            data.push({
-                "role": "user",
-                "content": contents
-            })
-            $input.value = ''
-
-            chatGPTAPI()
-        })
-
-        function chatGPTAPI() {
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data),
-                redirect: 'follow'
-            })
-            .then(res => res.json())
-            .then(res => {
-                console.log(res)
-                // 답변 온 것을 assistant로 저장
-                $answer.innerHTML = `<p>${res.choices[0].message.content}</p>`
-            })
-        }
-    </script>
-=======
-
->>>>>>> Stashed changes
 </body>
+<footer>
+    <div class="output">
+        <output name="result" form="myform" for="location days must car"></output>
+    </div>
+</footer>
 </html>
