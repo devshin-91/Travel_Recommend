@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.image-section {
+  flex: 1;
+  float:left;
+  padding: 40px;
+}
+
+.image-section > img {
+  width:500;
+  height:400px;
+  float:left;
+}
+
+.form-section {
+  flex: 1;
+  background-color: white;
+  padding: 40px;
+}
+
+#header{
+  width:960px;
+  height:300px;
+  border:1px solid;
+}
+
+.logo {
+  width:70px;
+  height:auto;
+  float:left; 
+}
+
+.logo > a > img {
+  width:100%;
+  height:auto;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  float:right;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.company {
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: bold;
+  color:black;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+.form-button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.output {
+  display:inline-block;
+  min-width:20px;
+  min-height:20px;
+  margin-top:10px;
+  padding:0 10px;
+  border:3px solid #1e73ff;
+}
