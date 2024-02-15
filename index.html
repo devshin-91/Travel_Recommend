@@ -4,48 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제주도 여행 일정</title>
-    <script defer src="js/index.js" type="module"></script>
-    <link rel="stylesheet" href="css/style.css">  
-
+    <title>제주도 여행일정 추천</title>
+    <!-- favicon.ico -->
+    <!-- https://www.bing.com/images/create/faviconicoeba19c-ec93b8eba78ced959c-ec9db4ebafb8eca780eba5bc-eba78ceb939cec96b4eca498-ecbba8ec8589ec9d80-eca09ceca3bceb8f84ec95bc/1-65cddbbd68a2419bb1189c0f48b74574?id=c0pQvxX7PtUrie2TkKSLOw%3d%3d&view=detailv2&idpp=genimg&thId=OIG2.XUYDxx72BGvxnpbhyBpr&FORM=GCRIDP&mode=overlay-->
+    <link rel="icon" href="images/ms-icon-310x310.png" type="image/x-icon">
+    <!-- css reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 구글 폰트 설정 -->
+    <!-- Noto Sans Korean -->
+    <!-- These fonts are licensed under the Open Font License. -->
+    <!-- 라이센스 정보 : https://fonts.google.com/noto/specimen/Noto+Sans+KR/about -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">      
+    <script src="js/index.js" defer type="module"></script>
 </head>
 <body>
-
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.jfif" alt="로고"></a>
-        </div>
-    
-        <div class="top-bar">
-            <div class="company">&copy;devshin-91</div>
-        </div>
+      <!-- Copilot 생성 이미지 -->
+      <!-- https://www.bing.com/images/create/ec82b0eab3bc-ed95b4ec9dbcec9db4-ebb094ed8395ec9db4eb9098eb8a94-ecb694ec8381ed9994eb909c-eba19ceab3a0eba5bc-eab7b8eba0a4eca498/1-65cb44988aa84b698195683456d091d6?id=RvcJOWKZ6rlKcc51I4goJA%3d%3d&view=detailv2&idpp=genimg&idpbck=1&form=BICREC&idpview=singleimage&thid=OIG2.tuGCG1oH0ZmckGHQFwYK -->
+      <a href="/"><img src="images/logo.jfif" class="logo" alt="로고" /></a>
+      <h1 class="title">제주도 여행일정 추천</h1>
+      <h1 class="copyright">&copy;devshin-91</h1>
     </header>
 
-    <div class="container">
-        <div class="image-section">
-            <img src="images/cafe.jfif" alt="카페">
-        </div>
-        <div class="form-section">
-            <div class="form-title">제주도 여행 일정 입력</div>
-            <form id="form">
-                <h3>어디로 여행하시나요?</h3>
-                <input type="text" class="form-input" id="location" name="location" placeholder="제주도의 동네 또는 장소를 입력해주세요">
-                <h3>여행 일정을 입력해 주세요</h3>
-                <input type="text" class="form-input" id="days" name="days" placeholder="예: 1일">
-                <h3>여행 일정에 꼭 들어갔으면 하는 여행지를 입력해 주세요.</h3>
-                <input type="text" class="form-input" id="must" name="must" placeholder="예: 성산일출봉">
-                <h3>차를 렌트하셨나요?</h3>
-                <input type="radio" name="car" value="yes" />네
-                <input type="radio" name="car" value="no" />아니오
-                <button type="submit" class="form-button" id="submit">일정 생성</button>
-            </form>
-            <div class="answer"></div>
-        </div>
-    </div>
+    <main>
+      <section>
+        <!-- Copilot 생성 이미지 -->
+        <!-- https://www.bing.com/images/create/a-natural-and-cafe-scene-of-jeju-island/1-65cb3a7107a34c24bb19dbacb5ccf922?id=i4%2b8gFrBuY7sfg%2bQSbwwEg%3d%3d&view=detailv2&idpp=genimg&idpbck=1&form=BICREC&idpview=singleimage&thid=OIG3.yG0gOnn1kIhAficvveUr -->
+        <img src="images/cafe.jfif" class="image" alt="카페">
+      </section>
+      <section>
+        <h2 class="form-title">제주도 여행 일정 입력</h2>
+        <form id="form">
+            <h3 class="query">어디로 여행하시나요?</h3>
+            <input type="text" class="form-input" id="location" name="location" placeholder="예: 성산읍" autofocus />
+            <h3 class="query">여행 일정을 입력해 주세요</h3>
+            <input type="text" class="form-input" id="days" name="days" placeholder="예: 1일" autofocus />
+            <h3 class="query">여행 일정에 꼭 들어갔으면 하는 여행지를 입력해 주세요.</h3>
+            <input type="text" class="form-input" id="must" name="must" placeholder="예: 성산일출봉" autofocus />
+            <h3 class="query">차를 렌트하셨나요?</h3>
+            <input type="radio" name="car" value="yes" />네
+            <input type="radio" name="car" value="no" />아니오
+            <button type="submit" class="form-button" id="submit">일정 생성</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <article class="answer" placeholder="여기에 chatgpt의 응답이 나타납니다"></article>
+    </footer>    
 </body>
-<footer>
-    <div class="output">
-        <output name="result" form="myform" for="location days must car"></output>
-    </div>
-</footer>
-</html>
